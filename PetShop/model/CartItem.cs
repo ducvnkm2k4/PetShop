@@ -5,7 +5,8 @@ using System.Web;
 
 namespace PetShop.model
 {
-    public class CartItem
+    public class CartItem:Product
     {
+        public int Quantity;
     }
 }

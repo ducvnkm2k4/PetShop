@@ -13,5 +13,23 @@ namespace PetShop.web_pages
 
     public partial class TrangChu
     {
+
+        /// <summary>
+        /// taikhoan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl taikhoan;
+
+        /// <summary>
+        /// numOfProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl numOfProduct;
     }
 }
