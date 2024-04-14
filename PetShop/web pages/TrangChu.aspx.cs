@@ -16,6 +16,7 @@ namespace PetShop.web_pages
         {
             numOfProduct.InnerHtml = "<p>" + LaySoLuongSanPhamTrongGioHang() + "</p>";
             TaiKhoan();
+            product_list.InnerHtml = HienProducts(12, "");
         }
 
         public int LaySoLuongSanPhamTrongGioHang()

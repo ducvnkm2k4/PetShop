@@ -52,8 +52,8 @@
             <nav class="header__navbar">
                 <ul class="menu_list">
                     <li><a href="TrangChu.aspx" style="color:#FA8072;">Trang chủ</a></li>
-                    <li><a href="TrangCho.aspx?type=cho">Chó</a></li>
-                    <li><a href="TrangMeo.aspx?type=meo">Mèo</a></li>
+                    <li><a href="SanPhamCho.aspx">Chó</a></li>
+                    <li><a href="SanPhamMeo.aspx">Mèo</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
@@ -118,9 +118,7 @@
 
         <h1 class="title">Sản phẩm bán chạy</h1>
 
-        <div class="product-list">
-            <%= HienProducts(12,"") %>
-        </div>
+        <div class="product-list" id="product_list" runat="server"></div>
     </main>
 
     <footer class="footer">
