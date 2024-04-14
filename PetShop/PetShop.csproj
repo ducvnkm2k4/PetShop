@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assest\css\base.css" />
+    <Content Include="assest\css\footer.css" />
     <Content Include="assest\css\header.css" />
     <Content Include="assest\css\TrangChu.css" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\css\all.css" />

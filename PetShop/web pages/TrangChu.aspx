@@ -4,10 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Cửa hàng bán đồ và phụ kiện cho thú cưng</title>
     <link rel="stylesheet" href="../assest/font/themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="../assest/font/fontawesome-free-6.5.2-web/css/all.min.css" />
-    <link rel="stylesheet" href="../assest/css/header.css" />
     <link rel="stylesheet" href="../assest/css/TrangChu.css" />
 </head>
 <body>
@@ -15,7 +14,7 @@
         <input type="checkbox" class="check_navBar" name="check_navBar" id="check_navBar" hidden="hidden"/>
         <label for="check_navBar" class="overLayNavBar"></label>
         <!-- TOP BAR--->
-        <div class="header__topbar">
+        <div class="header__topbar" >
             <div class="topbar__left"> Cửa hàng bán đồ và phụ kiện cho thú cưng</div>
             <div class="topbar__right taikhoan" id="taikhoan" runat="server">Đăng nhập|Đăng ký</div>
         </div>
@@ -47,7 +46,7 @@
         </div>
          <!-- Nav bar-->
         <div class="navBar_Container">
-             <div class="taikhoan tknavbar" id="Div1" runat="server">Đăng nhập|Đăng ký</div>
+             <div class="taikhoan tknavbar" id="taikhoannavbar" runat="server">Đăng nhập|Đăng ký</div>
             <label for="check_navBar" style="display:inline;"><i class="fa-solid fa-xmark"></i></label>
 
             <nav class="header__navbar">
@@ -98,8 +97,7 @@
                 <span class="dot" onclick="chuyenSlide(3)"></span>
             </div>
         </div>
-
-         <div class="container_item">
+            <div class="container_item">
             <div class="item">
                 <div class="icon"><i class="ti-gift"></i></div>
                 <div class="item_infor">Các sản phẩm <br/> phong phú</div>
@@ -118,10 +116,10 @@
             </div>
         </div>  
 
-        <h3 class="title">Sản phẩm bán chạy</h3>
+        <h1 class="title">Sản phẩm bán chạy</h1>
 
         <div class="product-list">
-            <%= HienProducts(0,12) %>
+            <%= HienProducts(12,"") %>
         </div>
     </main>
 

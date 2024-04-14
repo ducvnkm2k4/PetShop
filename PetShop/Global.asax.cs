@@ -194,7 +194,7 @@ namespace PetShop
                 {
                     Id="19",
                     Type="meo",
-                    Image="../assest/images/meo/sp-19.jpg",
+                    Image="../assest/images/meo/sp-19.png",
                     Name = "Yếm teddy kèm túi và dây dắt cho mèo",
                     Price=140000,
                     Detail = "Yếm teddy kèm túi và dây dắt cho chó mèo sẽ là sự lựa chọn rất tốt cho bạn. Sản phẩm không làm đau mà lại dễ dàng giúp bạn quản lý thú cưng hơn. Yếm kèm 1 túi nhỏ rất tiện dụng cho các bạn đựng tiền hoặc các đồ dùng nhỏ gọn."

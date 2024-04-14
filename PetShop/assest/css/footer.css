@@ -1,0 +1,15 @@
+﻿.footer {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    border-top: 5px solid #fd6f5f;
+    justify-content: space-between;
+}
+
+.footer_left {
+    margin: 0 75px;
+}
+
+.footer_right {
+    margin: 0 75px;
+}

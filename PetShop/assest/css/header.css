@@ -34,6 +34,7 @@
 .topbar__left {
     text-transform: uppercase;
 }
+
 /*Bottom bar*/
 .header__bottombar {
     height: 70px;
@@ -43,7 +44,7 @@
     padding: 0px 10%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 .header__logo{
@@ -156,6 +157,7 @@
         margin-left:30px;
         margin-top:30px;
         font-size:16px;
+        color:black;
     }
 }
 @media screen and (max-width: 767px){
@@ -237,5 +239,6 @@
         margin-left: 30px;
         margin-top: 30px;
         font-size: 16px;
+        color:black;
     }
 }
