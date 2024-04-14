@@ -1,16 +1,35 @@
 ﻿@import url(base.css);
 
+.fa-bars,
+.fa-xmark, 
+.tknavbar {
+    display: none;
+}
+.overLayNavBar{
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.3);
+    z-index:30;
+
+}
+.check_navBar:checked ~ .overLayNavBar{
+    display:block;
+}
 /*Top bar*/
 .header__topbar {
     height: 40px;
-    width:100%;
+    width: 100%;
     color: white;
     background-image: linear-gradient(0,#FFA07A,#FA8072);
     display: flex;
     justify-content: space-between;
     line-height: 40px;
     font-size: 16px;
-    padding:0px 10%;
+    padding: 0px 10%;
 }
 .topbar__left {
     text-transform: uppercase;
@@ -24,6 +43,7 @@
     padding: 0px 10%;
     justify-content: space-between;
     align-items: center;
+    margin-bottom:15px;
 }
 
 .header__logo{
@@ -81,4 +101,141 @@
     text-transform: uppercase;
     font-weight: 900;
     color: black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .header__topbar{
+        justify-content:center;
+    }
+    #taikhoan {
+        display: none;
+    }
+
+    .navBar_Container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50vw;
+        background-color: white;
+        transform: translateX(-100%);
+        transition: transform linear 0.2s;
+        z-index:31;
+    }
+    .check_navBar:checked ~ .navBar_Container {
+        transform: translateX(0%);
+    }
+    .header__navbar .menu_list {
+        display: block;
+        padding: 50px 0px 0px 50px;
+    }
+    .header__navbar .menu_list li{
+        margin-bottom:10px;
+    }
+
+    .fa-bars {
+        display: inline;
+        position: absolute;
+        top: 65px;
+        left: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .fa-xmark{
+        display:block;
+        position:absolute;
+        top:0px;
+        right:25px;
+        margin-top:30px;
+        font-size:20px;
+        cursor:pointer;
+    }
+    .tknavbar{
+        display:block;
+        margin-left:30px;
+        margin-top:30px;
+        font-size:16px;
+    }
+}
+@media screen and (max-width: 767px){
+    .header__topbar {
+        justify-content: center;
+        padding: 0px;
+    }
+    #taikhoan {
+        display: none;
+    }
+
+    .header__bottombar{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+            "aa bb"
+            "cc cc";
+        padding-top:10px;
+        height:175px;
+    }
+    .header__search{
+        grid-area:cc;
+        width:80%;
+        margin:0 auto;
+    }
+    .header__logo{
+        grid-area:aa;
+    }
+    .header__shopping_cart{
+        grid-area:bb;
+    }
+
+    .navBar_Container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70vw;
+        background-color: white;
+        transform: translateX(-100%);
+        transition: transform linear 0.2s;
+        z-index:31;
+    }
+
+    .check_navBar:checked ~ .navBar_Container {
+        transform: translateX(0%);
+    }
+
+    .header__navbar .menu_list {
+        display: block;
+        padding: 50px 0px 0px 50px;
+    }
+
+    .header__navbar .menu_list li {
+        margin-bottom: 10px;
+    }
+
+    .fa-bars {
+        display: inline;
+        position: absolute;
+        top: 170px;
+        left: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .fa-xmark {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        margin-top: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .tknavbar {
+        display: block;
+        margin-left: 30px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
 }

@@ -15,14 +15,14 @@ namespace PetShop
         public const string LIST_INFO_CUSTOMER = "ListInfoCustomer";
         public const string LIST_PRODUCT = "ListProduct";
         public const string LIST_SHOPPING_CART = "ListShoppingCart";
-        public const int ID_CUSTOMER = 0;
+        public const string CUSTOMER_NAME = "";
 
         protected void Application_Start(object sender, EventArgs e)
         {
             Application[Global.LIST_INFO_CUSTOMER] = new List<Customer>
             {
-                new Customer{Id=1,Name="Hoàng anh",Email="anh@gmail.com",Password="anh123456",PhoneNumber="123456789",Address="Định công"},
-                new Customer{Id=2,Name="Việt anh",Email="Vanh@gmail.com",Password="Vanh123",PhoneNumber="123455612",Address="Định công"}
+                new Customer{Name="Hoàng anh",Email="anh@gmail.com",Password="anh123456",PhoneNumber="123456789",Address="Định công"},
+                new Customer{Name="Việt anh",Email="Vanh@gmail.com",Password="Vanh123",PhoneNumber="123455612",Address="Định công"}
 
             };
 
@@ -50,7 +50,7 @@ namespace PetShop
                 {
                     Id="3",
                     Type="cho",
-                    Image="../assest/images/Cho/sp-03.jpg",
+                    Image="../assest/images/Cho/sp-03.png",
                     Name = "Dụng Cụ Lấy Lông Chó Mèo Bám Dính",
                     Price = 145000,
                     Detail = "Dụng Cụ Lấy Lông Chó Mèo Bám Dính được làm từ nhựa ABS. Nhựa ABS là loại nhựa có độ cứng, độ bền cực cao. Sản phẩm có khả năng chịu lực tốt, không dễ bị trày xước. Đặc biệt, loại nhựa này hoàn toàn đảm bảo an toàn cho người sử dụng, không mùi, không chất hoá học."
@@ -214,6 +214,7 @@ namespace PetShop
         protected void Session_Start(object sender, EventArgs e)
         {
             Session[Global.LIST_SHOPPING_CART] = new List<CartItem>();
+            Session[Global.CUSTOMER_NAME] = "";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
