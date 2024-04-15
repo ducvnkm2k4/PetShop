@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assest\css\base.css" />
+    <Content Include="assest\css\ChiTietSanPham.css" />
     <Content Include="assest\css\footer.css" />
     <Content Include="assest\css\header.css" />
     <Content Include="assest\css\SanPhamCho.css" />
@@ -2553,8 +2554,7 @@
     <Content Include="assest\js\slideshow.js" />
     <Content Include="Global.asax" />
     <Content Include="web pages\ChiTietSanPham.aspx" />
-    <Content Include="web pages\DangKy.aspx" />
-    <Content Include="web pages\DangNhap.aspx" />
+    <Content Include="web pages\XuLyLogin_Logout_SignUp.aspx" />
     <Content Include="web pages\GioHang.aspx" />
     <Content Include="web pages\SanPhamCho.aspx" />
     <Content Include="web pages\SanPhamMeo.aspx" />
@@ -2562,6 +2562,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2575,19 +2576,12 @@
     <Compile Include="web pages\ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web pages\DangKy.aspx.cs">
-      <DependentUpon>DangKy.aspx</DependentUpon>
+    <Compile Include="web pages\XuLyLogin_Logout_SignUp.aspx.cs">
+      <DependentUpon>XuLyLogin_Logout_SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web pages\DangKy.aspx.designer.cs">
-      <DependentUpon>DangKy.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="web pages\DangNhap.aspx.cs">
-      <DependentUpon>DangNhap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="web pages\DangNhap.aspx.designer.cs">
-      <DependentUpon>DangNhap.aspx</DependentUpon>
+    <Compile Include="web pages\XuLyLogin_Logout_SignUp.aspx.designer.cs">
+      <DependentUpon>XuLyLogin_Logout_SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="web pages\GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>

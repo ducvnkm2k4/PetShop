@@ -1,25 +1,167 @@
 ﻿@import url(base.css);
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 30;
+}
+h3 {
+    margin-block: 15px;
+    font-size: 18px
+}
+.inpText {
+    width: 420px;
+    height: 54px;
+    padding-inline: 20px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 1.1rem;
+}
+
+.inpText:focus {
+    outline: none;
+}
+
+/*
+
+    session login
+
+*/
+
+.chk_visibleContainerLogin:checked ~ .overlay#overlayLogin {
+    display: block;
+    z-index: 32;
+    background-color: rgba(0,0,0,0.5);
+}
+.chk_visibleContainerLogin:checked ~ .Container_Login{
+    display:block;
+}
+.Container_Login {
+    display:none;
+    padding: 30px;
+    max-width: 80%;
+    position: fixed;
+    z-index: 101;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Container_Login span, .container_SignUp span {
+    color: red;
+}
+
+/*login*/
+.Container_Login .login{
+    display:block;
+}
+.Container_Login .fa-xmark#btncloseformlogin, .container_SignUp .fa-xmark#btncloseformsignup {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+    cursor:pointer;
+}
+.Container_Login .fa-chevron-left#backToLogin {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.1rem;
+}
+#btnLogin, #btnSignup {
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    margin: 15px auto;
+    font-size: 1.1rem;
+    background-color: #fd5e4c;
+    outline: #fd5e4c;
+}
+#btnLogin:hover, #btnSignup:hover {
+    background-color: #e35544;
+}
+.Container_Login .login .content{
+    font-size:1.05rem;
+}
+.Container_Login .content .action {
+    cursor: pointer;
+}
+
+/*forgot password*/
+.Container_Login .forgotPass {
+    display: none;
+}
+
+#btnForgot {
+    padding: 10px 30px;
+    background-color: #fd5e4c;
+    outline: #fd5e4c;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    margin: 15px 0px;
+}
+#btnForgot:hover {
+    background-color: #e35544;
+}
+
+
+/*
+
+    session signUp
+
+*/
+.chk_visibleContainerSignUp:checked ~ .overlay#overlaySignUp {
+    display: block;
+    z-index: 32;
+    background-color: rgba(0,0,0,0.5);
+}
+.chk_visibleContainerSignUp:checked~ .container_SignUp{
+    display:block;
+}
+.container_SignUp {
+    display: none;
+    padding: 30px;
+    max-width: 80%;
+    position: fixed;
+    z-index: 101;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*
+    header
+*/
 .fa-bars,
-.fa-xmark, 
+.fa-xmark,
 .tknavbar {
     display: none;
 }
-.overLayNavBar{
-    display:none;
-    position:fixed;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
-    background-color:rgba(0,0,0,0.3);
-    z-index:30;
-
-}
-.check_navBar:checked ~ .overLayNavBar{
+.check_navBar:checked ~ .overlay#overLayNavBar{
     display:block;
 }
 /*Top bar*/
+.taikhoan{
+    cursor:pointer;
+
+}
+
+.taikhoan.topbar {
+    color: white
+}
+.taikhoan.sidebar{
+    color:black;
+}
 .header__topbar {
     height: 40px;
     width: 100%;
@@ -91,13 +233,15 @@
     padding-right: 10px;
 }
 /*nav menu*/
-
 .header__navbar .menu_list{
     display:flex;
     list-style:none;
     justify-content:space-between;
     padding:20px 250px;
+    margin-bottom:20px;
+    border-bottom:1px solid gray;
 }
+
 .menu_list a {
     text-transform: uppercase;
     font-weight: 900;
@@ -129,6 +273,7 @@
     .header__navbar .menu_list {
         display: block;
         padding: 50px 0px 0px 50px;
+        border-bottom: none;
     }
     .header__navbar .menu_list li{
         margin-bottom:10px;
@@ -209,6 +354,7 @@
     .header__navbar .menu_list {
         display: block;
         padding: 50px 0px 0px 50px;
+        border-bottom: none;
     }
 
     .header__navbar .menu_list li {
@@ -241,4 +387,43 @@
         font-size: 16px;
         color:black;
     }
+
+    /*
+        session login
+    */
+    .Container_Login {
+        display: none;
+        padding: 30px;
+        max-width: 100%;
+        background-color: white;
+        width:100%;
+        height:100%;
+    }
+    .Container_Login .forgotPass, .Container_Login .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 0px 30px;
+    }
+
+    /*
+        session signup
+    */
+    .container_SignUp{ 
+        display: none;
+        padding: 30px;
+        max-width: 100%;
+        background-color: white;
+        width:100%;
+        height:100%;
+    }
+    .container_SignUp .signup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 0px 30px;
+    }
+
 }

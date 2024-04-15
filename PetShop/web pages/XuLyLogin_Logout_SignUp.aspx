@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangKy.aspx.cs" Inherits="PetShop.web_pages.DangKy" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XuLyLogin_Logout_SignUp.aspx.cs" Inherits="PetShop.web_pages.DangKy" %>
 
 <!DOCTYPE html>
 

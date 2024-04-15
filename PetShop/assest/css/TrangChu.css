@@ -1,7 +1,6 @@
 ﻿@import url(base.css);
 @import url(header.css);
 @import url(footer.css);
-
 /*Banner*/
 .banner {
     position: relative;
@@ -204,12 +203,5 @@
         grid-column: 1/13;
         grid-template-columns: 50% 50%;
         margin-left: 20px;
-    }
-
-
-    /* footer */
-    .footer {
-        display: block;
-        text-align: center;
-    }
+    }   
 }

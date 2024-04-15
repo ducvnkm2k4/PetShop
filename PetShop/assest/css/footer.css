@@ -13,3 +13,9 @@
 .footer_right {
     margin: 0 75px;
 }
+@media screen and (max-width: 767px){
+    .footer {
+        display: block;
+        text-align: center;
+    }
+}
