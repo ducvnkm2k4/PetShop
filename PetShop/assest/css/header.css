@@ -1,101 +1,8 @@
 ﻿@import url(base.css);
 
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.3);
-    z-index: 30;
-}
-h3 {
-    margin-block: 15px;
-    font-size: 18px
-}
-.inpText {
-    width: 420px;
-    height: 54px;
-    padding-inline: 20px;
-    border-radius: 15px;
-    border: 1px solid gray;
-    font-size: 1.1rem;
-}
 
-.inpText:focus {
-    outline: none;
-}
 
-/*
 
-    session login
-
-*/
-
-.chk_visibleContainerLogin:checked ~ .overlay#overlayLogin {
-    display: block;
-    z-index: 32;
-    background-color: rgba(0,0,0,0.5);
-}
-.chk_visibleContainerLogin:checked ~ .Container_Login{
-    display:block;
-}
-.Container_Login {
-    display:none;
-    padding: 30px;
-    max-width: 80%;
-    position: fixed;
-    z-index: 101;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.Container_Login span, .container_SignUp span {
-    color: red;
-}
-
-/*login*/
-.Container_Login .login{
-    display:block;
-}
-.Container_Login .fa-xmark#btncloseformlogin, .container_SignUp .fa-xmark#btncloseformsignup {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 25px;
-    margin: 0px;
-    padding: 0px;
-    cursor:pointer;
-}
-.Container_Login .fa-chevron-left#backToLogin {
-    display: none;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    font-size: 1.1rem;
-}
-#btnLogin, #btnSignup {
-    width: 100%;
-    height: 45px;
-    border-radius: 15px;
-    margin: 15px auto;
-    font-size: 1.1rem;
-    background-color: #fd5e4c;
-    outline: #fd5e4c;
-}
-#btnLogin:hover, #btnSignup:hover {
-    background-color: #e35544;
-}
-.Container_Login .login .content{
-    font-size:1.05rem;
-}
-.Container_Login .content .action {
-    cursor: pointer;
-}
 
 /*forgot password*/
 .Container_Login .forgotPass {
@@ -115,30 +22,6 @@ h3 {
 }
 
 
-/*
-
-    session signUp
-
-*/
-.chk_visibleContainerSignUp:checked ~ .overlay#overlaySignUp {
-    display: block;
-    z-index: 32;
-    background-color: rgba(0,0,0,0.5);
-}
-.chk_visibleContainerSignUp:checked~ .container_SignUp{
-    display:block;
-}
-.container_SignUp {
-    display: none;
-    padding: 30px;
-    max-width: 80%;
-    position: fixed;
-    z-index: 101;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 /*
     header
 */

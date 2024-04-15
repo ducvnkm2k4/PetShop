@@ -72,11 +72,13 @@
   <ItemGroup>
     <Content Include="assest\css\base.css" />
     <Content Include="assest\css\ChiTietSanPham.css" />
+    <Content Include="assest\css\Dangnhap.css" />
     <Content Include="assest\css\footer.css" />
     <Content Include="assest\css\header.css" />
     <Content Include="assest\css\SanPhamCho.css" />
     <Content Include="assest\css\SanPhamMeo.css" />
     <Content Include="assest\css\TrangChu.css" />
+    <Content Include="assest\css\Dangky.css" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\css\all.css" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\css\all.min.css" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\css\brands.css" />
@@ -2549,13 +2551,15 @@
     <Content Include="assest\images\Meo\sp-19.png" />
     <Content Include="assest\images\Meo\sp-20.jpg" />
     <Content Include="assest\images\pk1.jpg" />
-    <Content Include="assest\js\anh.js" />
-    <Content Include="assest\js\kiemtra.js" />
+    <Content Include="assest\js\formTaiKhoan.js" />
     <Content Include="assest\js\slideshow.js" />
+    <Content Include="assest\css\QuenMatKhau.css" />
     <Content Include="Global.asax" />
     <Content Include="web pages\ChiTietSanPham.aspx" />
-    <Content Include="web pages\XuLyLogin_Logout_SignUp.aspx" />
+    <Content Include="web pages\Dangky.aspx" />
+    <Content Include="web pages\Dangnhap.aspx" />
     <Content Include="web pages\GioHang.aspx" />
+    <Content Include="web pages\QuenMatKhau.aspx" />
     <Content Include="web pages\SanPhamCho.aspx" />
     <Content Include="web pages\SanPhamMeo.aspx" />
     <Content Include="web pages\TrangChu.aspx" />
@@ -2576,12 +2580,19 @@
     <Compile Include="web pages\ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web pages\XuLyLogin_Logout_SignUp.aspx.cs">
-      <DependentUpon>XuLyLogin_Logout_SignUp.aspx</DependentUpon>
+    <Compile Include="web pages\Dangky.aspx.cs">
+      <DependentUpon>Dangky.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web pages\XuLyLogin_Logout_SignUp.aspx.designer.cs">
-      <DependentUpon>XuLyLogin_Logout_SignUp.aspx</DependentUpon>
+    <Compile Include="web pages\Dangky.aspx.designer.cs">
+      <DependentUpon>Dangky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web pages\Dangnhap.aspx.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web pages\Dangnhap.aspx.designer.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
     </Compile>
     <Compile Include="web pages\GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
@@ -2589,6 +2600,13 @@
     </Compile>
     <Compile Include="web pages\GioHang.aspx.designer.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web pages\QuenMatKhau.aspx.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web pages\QuenMatKhau.aspx.designer.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
     </Compile>
     <Compile Include="web pages\SanPhamCho.aspx.cs">
       <DependentUpon>SanPhamCho.aspx</DependentUpon>

@@ -52,20 +52,20 @@ namespace PetShop
             {
                 taikhoan = "Xin chào " + customerName +
                             "<span> | </span>" +
-                            "<a href='XuLyLogin_Logout_SignUp?request=dangxuat&ru=" + Url + "' class='taikhoan topbar'>Đăng xuất </a>";
+                            "<a href='DangNhap.aspx?request=dangxuat&preUrl=" + Url + "' style='color:white'>Đăng xuất </a>";
                 taikhoannavbar =    "Xin chào " + customerName +
                                     "<span> | </span>" +
-                                    "<a href='XuLyLogin_Logout_SignUp?request=dangxuat&ru=" + Url + "' class='taikhoan sidebar'>Đăng xuất </a>";
+                                    "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng xuất </a>";
             }
             else
             {
-                taikhoan = "<label for='chk_visibleContainerLogin' class='taikhoan topbar' >Đăng nhập </a>" +
+                taikhoan = "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:white' >Đăng nhập </a>" +
                             "<span> | </span>" +
-                            "<label for='chk_visibleContainerSignUp' class='taikhoan topbar' >Đăng ký </a>";
+                            "<a href='DangKy.aspx?request=dangxuat&ru=" + Url + "' style='color:white' >Đăng ký </a>";
 
-                taikhoannavbar = "<label for='chk_visibleContainerLogin' class='taikhoan sidebar' >Đăng nhập </a>" +
+                taikhoannavbar = "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng nhập </a>" +
                                     "<span> | </span>" +
-                                    "<label for='chk_visibleContainerSignUp' class='taikhoan sidebar' >Đăng ký </a>";
+                                    "<a href='DangKy.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng ký </a>";
             }
             return new KeyValuePair<string, string>(taikhoan, taikhoannavbar);
         }
