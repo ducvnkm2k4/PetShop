@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <a href="GioHang.aspx?request=addItem&urlrequest=<%=Request.Url.AbsoluteUri%>&id=<%=Request.QueryString["pi"] %>">
+            <a href="ChiTietSanPham.aspx?request=addItem&preUrl=<%=Request.Url.AbsoluteUri%>&id=<%=Request.QueryString["pi"] %>">
                 <input type="submit" value="Thêm vào giỏ hàng" class="btnadd" id="btnadd" />
             </a>
         </div>

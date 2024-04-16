@@ -16,9 +16,9 @@ namespace PetShop.web_pages
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
-            Uri referrer = Request.UrlReferrer;
-            string UrlRequest = referrer != null ? referrer.ToString() : string.Empty;
-            KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, UrlRequest);
+
+            KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, Request.Url.AbsoluteUri);
+
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
 
@@ -36,9 +36,9 @@ namespace PetShop.web_pages
                 product_detail.InnerText = product.Detail;
             }
 
-            if (request != null)
+            if (request!=null)
             {
-                string preUrl = Request.QueryString["urlrequest"];
+                string preUrl = Request.QueryString["preUrl"];
                 string id = Request.QueryString["id"];
                 Product product = products.Find(p => p.Id.Equals(id));
                 CartItem cartItem = cartItems.Find(ci => ci.Id.Equals(id));

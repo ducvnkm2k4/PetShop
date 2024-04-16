@@ -2551,7 +2551,6 @@
     <Content Include="assest\images\Meo\sp-19.png" />
     <Content Include="assest\images\Meo\sp-20.jpg" />
     <Content Include="assest\images\pk1.jpg" />
-    <Content Include="assest\js\formTaiKhoan.js" />
     <Content Include="assest\js\slideshow.js" />
     <Content Include="assest\css\QuenMatKhau.css" />
     <Content Include="Global.asax" />

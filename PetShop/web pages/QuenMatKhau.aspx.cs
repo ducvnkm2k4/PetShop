@@ -15,11 +15,18 @@ namespace PetShop.web_pages
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
-            Uri referrer = Request.UrlReferrer;
-            string UrlRequest = referrer != null ? referrer.ToString() : string.Empty;
-            KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, UrlRequest);
+            KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, Request.Url.AbsoluteUri);
+
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
+
+            string request = Request.QueryString["request"];
+            string preUrl = Request.QueryString["preUrl"];
+
+            if (request == "submit")
+            {
+                Response.Redirect(preUrl);
+            }
         }
     }
 }

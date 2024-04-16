@@ -15,6 +15,10 @@ h3 {
     border: 1px solid gray;
     font-size: 1.1rem;
 }
+.inpText:focus {
+    outline: none;
+    border: 1px solid gray;
+}
 .formsignup span {
     color: red;
 }

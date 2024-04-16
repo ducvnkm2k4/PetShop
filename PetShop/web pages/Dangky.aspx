@@ -10,6 +10,109 @@
     <link rel="stylesheet" href="../assest/font/fontawesome-free-6.5.2-web/css/all.min.css" />
 
     <link rel="stylesheet" href="../assest/css/Dangky.css" />
+
+    <script type="text/javascript">
+        function checkInputFormSignUp() {
+            let txtName = document.getElementById("txtName");
+            let notifyName = document.getElementById("notifyName");
+
+            let txtGmail = document.getElementById("txtGmail");
+            let notifyGmail = document.getElementById("notifyGmail");
+
+            let txtSDT = document.getElementById("txtSDT");
+            let notifySDT = document.getElementById("notifySDT");
+
+            let txtDiaChi = document.getElementById("txtDiaChi");
+            let notifyDiaChi = document.getElementById("notifyDiaChi");
+
+            let txtpassword = document.getElementById("txtPassword");
+            let notifypassword = document.getElementById("notifyPassword");
+
+            //tên trống
+            if (txtName.value.trim().length == 0) {
+                txtName.focus();
+                txtName.select();
+                txtName.style.border = "1px solid red";
+                notifyName.innerText = "Tên đang trống";
+                return false;
+            } else {
+                txtName.style.border = "1px solid black";
+                notifyName.innerText = "";
+            }
+            //gmail trống
+            if (txtGmail.value.trim().length == 0) {
+                txtGmail.focus();
+                txtGmail.select();
+                txtGmail.style.border = "1px solid red";
+                notifyGmail.innerText = "gmail đang trống";
+                return false;
+            } else {
+                txtGmail.style.border = "1px solid black";
+                notifyGmail.innerText = "";
+            }
+
+            //địa chỉ trống
+            if (txtDiaChi.value.trim().length == 0) {
+                txtDiaChi.focus();
+                txtDiaChi.select();
+                txtDiaChi.style.border = "1px solid red";
+                notifyDiaChi.innerText = "địa chỉ đang trống";
+                return false;
+            } else {
+                txtDiaChi.style.border = "1px solid black";
+                notifyDiaChi.innerText = "";
+            }
+            //password trống
+            if (txtpassword.value.trim().length == 0) {
+                txtpassword.focus();
+                txtPassword.select();
+                txtpassword.style.border = "1px solid red";
+                notifypassword.innerText = "mật khẩu đang trống";
+                return false;
+            } else {
+                txtpassword.style.border = "1px solid black";
+                notifypassword.innerText = "";
+            }
+
+            if (txtGmail.value.indexOf("@gmail.com") < 0) {
+                txtGmail.focus();
+                txtGmail.select();
+                txtGmail.style.border = "1px solid red";
+                notifyGmail.innerText = "gmail không đúng định dạng (có chứa '@gmail.com' và không chứa ký tự tiếng việt)";
+                return false;
+            } else {
+                txtGmail.style.border = "1px solid black";
+                notifyGmail.innerText = "";
+            }
+
+            let SDT = txtSDT.value;
+            if (SDT.trim().length != 0 && ! /^\d{10}$/.test(SDT)) {
+                txtSDT.focus();
+                txtSDT.style.border = "1px solid red";
+                notifySDT.innerText = "Số điện thoại không hợp lệ";
+                return false;
+            } else {
+                txtSDT.style.border = "1px solid black";
+                notifySDT.innerText = "";
+            }
+            if (txtpassword.value.trim().length < 6) {
+                txtpassword.focus();
+                txtPassword.select();
+                txtpassword.style.border = "1px solid red";
+                notifypassword.innerText = "mật khẩu cần ít nhất 6 ký tự";
+                return false;
+            } else {
+                txtpassword.style.border = "1px solid black";
+                notifypassword.innerText = "";
+            }
+            return true;
+        }
+
+        function onfocusInput(input,notify) {
+            input.style.border = "1px solid black";
+            notify.innerText = "";
+        }
+    </script>
 </head>
 <body>
 
@@ -65,37 +168,37 @@
     </header>
 
 
-    <form action="" method="get" class="formsignup">
+    <form action="DangKy.aspx?request=submit&preUrl=<%=Request.QueryString["preUrl"]%>" method="post" class="formsignup" onsubmit="return checkInputFormSignUp()">
         <h2 class="title">Đăng ký tài khoản</h2>
 
         <div class="container_SignUp__Name">
             <h3>Họ và tên <span>*</span></h3>
-            <input type="text" id="txtName" placeholder="nguyễn văn a" class="inpText"/>
-            <div><span id="notifyNameSignUp"></span></div>
+            <input type="text" id="txtName" name="txtName" placeholder="nguyễn văn a" class="inpText" onfocus="onfocusInput(this,notifyName)"/>
+            <div><span id="notifyName"></span></div>
         </div>
 
         <div class="container_SignUp__gmail">
             <h3>Gmail<span>*</span></h3>
-            <input type="email" id="txtgmailsignup" placeholder="abc@gmail.com" class="inpText"/>
-            <div><span id="notifygmailSignUp"></span></div>
+            <input type="text" id="txtGmail" name="txtGmail" placeholder="abc@gmail.com" class="inpText" onfocus="onfocusInput(this,notifyGmail)"/>
+            <div><span id="notifyGmail"></span></div>
         </div>
 
         <div class="container_SignUp__SDT">
             <h3>Số điện thoại</h3>
-            <input type="text" id="txtSDT" placeholder="số điện thoại" class="inpText"/>
-            <div><span id="notifySDTSignUp"></span></div>
+            <input type="text" id="txtSDT" name="txtSDT" placeholder="số điện thoại" class="inpText" onfocus="onfocusInput(this,notifySDT)"/>
+            <div><span id="notifySDT"></span></div>
         </div>
 
         <div class="container_SignUp__Address">
             <h3>Địa chỉ<span>*</span></h3>
-            <input type="text" id="txtDiaChi" placeholder="địa chỉ" class="inpText"/>
-            <div><span id="notifyDiaChiSignUp"></span></div>
+            <input type="text" id="txtDiaChi" name="txtDiaChi" placeholder="địa chỉ" class="inpText" onfocus="onfocusInput(this,notifyDiaChi)"/>
+            <div><span id="notifyDiaChi"></span></div>
         </div>
             
         <div class="container_SignUp__password">
             <h3 >Mật khẩu<span>*</span></h3>
-            <input type="password" id="txtPasswordSignup" placeholder="mật khẩu" class="inpText"/>
-            <div><span id="notifyPasswordSignUp"></span></div>
+            <input type="password" id="txtPassword" name="txtPassword" placeholder="mật khẩu" class="inpText" onfocus="onfocusInput(this,notifyPassword)"/>
+            <div><span id="notifyPassword"></span></div>
         </div>
 
         <div class="container_SignUp__submit">
@@ -103,7 +206,7 @@
         </div>
 
         <div class="container_SignUp__content">
-            Bạn đã có tài khoản? <span id="contentLogin" style="cursor:pointer">Đăng nhập</span>
+            Bạn đã có tài khoản? <a href="Dangnhap.aspx?preUrl=<%= Request.QueryString["preUrl"] %>" ><span id="contentLogin">Đăng nhập</span></a>
         </div>
     </form>
 

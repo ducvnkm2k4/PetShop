@@ -10,6 +10,64 @@
     <link rel="stylesheet" href="../assest/font/fontawesome-free-6.5.2-web/css/all.min.css" />
 
     <link rel="stylesheet" href="../assest/css/Dangnhap.css" />
+
+    <script type="text/javascript">
+        function checkInputFormLogin() {
+            let txtGmail = document.getElementById("txtGmail");
+            let NotifyGmail = document.getElementById("notifyEmail");
+            let txtpassword = document.getElementById("txtPassword");
+            let notifypassword = document.getElementById("notifyPassword");
+            if (txtGmail.value.trim().length == 0) {
+                txtGmail.focus();
+                txtGmail.select();
+                txtGmail.style.border = "1px solid red";
+                NotifyGmail.innerText = "gmail đang trống";
+                return false;
+            } else {
+                txtGmail.style.border = "1px solid black";
+                NotifyGmail.innerText = "";
+            }
+
+            if (txtpassword.value.trim().length == 0) {
+                txtpassword.focus();
+                txtPassword.select();
+                txtpassword.style.border = "1px solid red";
+                notifypassword.innerText = "mật khẩu đang trống";
+                return false;
+            } else {
+                txtpassword.style.border = "1px solid black";
+                notifypassword.innerText = "";
+            }
+
+            if (txtGmail.value.indexOf("@gmail.com") < 0) {
+                txtGmail.focus();
+                txtGmail.select();
+                txtGmail.style.border = "1px solid red";
+                NotifyGmail.innerText = "gmail không đúng định dạng (có chứa '@gmail.com' và không chứa ký tự tiếng việt)";
+                return false;
+            } else {
+                txtGmail.style.border = "1px solid black";
+                NotifyGmail.innerText = "";
+            }
+
+            if (txtpassword.value.trim().length < 6) {
+                txtpassword.focus();
+                txtPassword.select();
+                txtpassword.style.border = "1px solid red";
+                notifypassword.innerText = "mật khẩu cần ít nhất 6 ký tự";
+                return false;
+            } else {
+                txtpassword.style.border = "1px solid black";
+                notifypassword.innerText = "";
+            }
+            return true;
+        }
+
+        function onfocusInput(input, notify) {
+            input.style.border = "1px solid black";
+            notify.innerText = "";
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -63,21 +121,24 @@
         </div>
     </header>
 
-    <form action="XuLyLogin_Logout_SignUp.aspx?request=login" method="post" class="loginForm">
+    <form action="DangNhap.aspx?request=check&preUrl=<%=Request.QueryString["preUrl"] %>" method="post" class="loginForm" onsubmit="return checkInputFormLogin()">
         <div>
             <h1 class="title">Đăng Nhập</h1>
 
             <div class="Container_Login__NameLogin">
                 <h3>Tên đăng nhập<span>*</span> </h3>
-                <div><input type="email" name="txtNameLogin" id="txtNameLogin" placeholder="abc@gmail.com" class="inpText"/></div>
-                <div><span id="notifyEmailLogin"></span></div>
+
+                <div>
+                    <input type="text" id="txtGmail" placeholder="abc@gmail.com" class="inpText" runat="server" onfocus="onfocusInput(this,notifyEmail)"/>
+                    <div><span id="notifyEmail" runat="server"></span></div>
+                </div>
             </div>
 
             <div class="Container_Login__password">
                 <h3>Mật khẩu<span>*</span></h3>
                 <div>
-                    <input type="password" name="txtPassword" id="txtPasswordLogin" placeholder="mật khẩu" class="inpText"/>
-                    <div><span id="notifyPasswordLogin"></span></div>
+                    <input type="password"  id="txtPassword" placeholder="mật khẩu" class="inpText" runat="server" onfocus="onfocusInput(this,notifyPassword)"/>
+                    <div><span id="notifyPassword" runat="server"></span></div>
                 </div>
             </div>
 
@@ -86,28 +147,29 @@
             </div>
 
             <div class="content">
-                <div>Bạn quên mật khẩu,<a href="QuenMatKhau.aspx"><span>Quên mật khẩu</span></a></div>
-                <div>Bạn chưa có tài khoản,<a href="Dangky.aspx"><span>Đăng ký</span></a></div>
+                <div>Bạn quên mật khẩu,<a href="QuenMatKhau.aspx?preUrl=<%=Request.QueryString["preUrl"]%>"><span>Quên mật khẩu</span></a></div>
+                <div>Bạn chưa có tài khoản,<a href="Dangky.aspx?preUrl=<%=Request.QueryString["preUrl"]%>"><span>Đăng ký</span></a></div>
             </div>
         </div>
     </form>
 
-     <footer class="footer">
-        <div class="footer_left">
-            <h3>PET</h3>
-            <br/>
-            <h4>Môn: Lập trình web cơ bản</h4>
-            <h4>Đề tài: Website bán đồ và phụ kiện cho thú cưng</h4>
-            <h4>Giáo viên hướng dẫn: Lê Hữu Dũng</h4>
-        </div>
+    <footer class="footer">
+    <div class="footer_left">
+        <h3>PET</h3>
+        <br/>
+        <h4>Môn: Lập trình web cơ bản</h4>
+        <h4>Đề tài: Website bán đồ và phụ kiện cho thú cưng</h4>
+        <h4>Giáo viên hướng dẫn: Lê Hữu Dũng</h4>
+    </div>
 
-        <div class="footer_right">
-            <h3>Thành viên:</h3>
-            <br/>
-            <h4>Vũ Việt Cường</h4>
-            <h4>Nguyễn Đình Minh Đức</h4>
-            <h4>Trần Kim Quang Vinh</h4>
-        </div>
-    </footer>
+    <div class="footer_right">
+        <h3>Thành viên:</h3>
+        <br/>
+        <h4>Vũ Việt Cường</h4>
+        <h4>Nguyễn Đình Minh Đức</h4>
+        <h4>Trần Kim Quang Vinh</h4>
+    </div>
+</footer>
+    
 </body>
 </html>

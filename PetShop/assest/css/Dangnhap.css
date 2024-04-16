@@ -15,7 +15,9 @@ h3 {
     border: 1px solid gray;
     font-size: 1.1rem;
 }
-
+.inpText:focus{
+    outline:none;
+}
 .loginForm {
     max-width: 40rem;
     padding:4.8rem;

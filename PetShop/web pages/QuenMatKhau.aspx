@@ -63,11 +63,11 @@
         </div>
     </header>
 
-    <form action="" method="post" class="formforgotpass">
+    <form action="QuenMatKhau.aspx?request=submit&preurl=<%=Request.QueryString["preUrl"]%>" method="post" class="formforgotpass">
         <h2 class="title">Quên mật khẩu</h2>
         <h3>Hãy nhập gmail của bạn để lấy lại mật khẩu</h3>
         <div>
-            <input type="email" name="txtemailForgot" id="txtemailForgot" placeholder="abc@gmail.com" class="inpText"/>
+            <input type="text" name="txtemail" id="txtemail" placeholder="abc@gmail.com" class="inpText" required="required"/>
         </div>
         <div><input type="submit" id="btnForgot" value="Lấy lại mật khẩu" /></div>
     </form>
@@ -89,5 +89,8 @@
             <h4>Trần Kim Quang Vinh</h4>
         </div>
     </footer>
+    <script type="text/javascript">
+
+    </script>
 </body>
 </html>

@@ -55,17 +55,17 @@ namespace PetShop
                             "<a href='DangNhap.aspx?request=dangxuat&preUrl=" + Url + "' style='color:white'>Đăng xuất </a>";
                 taikhoannavbar =    "Xin chào " + customerName +
                                     "<span> | </span>" +
-                                    "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng xuất </a>";
+                                    "<a href='DangNhap.aspx?request=dangxuat&preUrl=" + Url + "' style='color:black' >Đăng xuất </a>";
             }
             else
             {
-                taikhoan = "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:white' >Đăng nhập </a>" +
+                taikhoan = "<a href='DangNhap.aspx?preUrl=" + Url + "' style='color:white' >Đăng nhập </a>" +
                             "<span> | </span>" +
-                            "<a href='DangKy.aspx?request=dangxuat&ru=" + Url + "' style='color:white' >Đăng ký </a>";
+                            "<a href='DangKy.aspx?preUrl=" + Url + "' style='color:white' >Đăng ký </a>";
 
-                taikhoannavbar = "<a href='DangNhap.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng nhập </a>" +
+                taikhoannavbar = "<a href='DangNhap.aspx?preUrl=" + Url + "' style='color:black' >Đăng nhập </a>" +
                                     "<span> | </span>" +
-                                    "<a href='DangKy.aspx?request=dangxuat&ru=" + Url + "' style='color:black' >Đăng ký </a>";
+                                    "<a href='DangKy.aspx?preUrl=" + Url + "' style='color:black' >Đăng ký </a>";
             }
             return new KeyValuePair<string, string>(taikhoan, taikhoannavbar);
         }
