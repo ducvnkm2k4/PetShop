@@ -74,6 +74,7 @@
     <Content Include="assest\css\ChiTietSanPham.css" />
     <Content Include="assest\css\Dangnhap.css" />
     <Content Include="assest\css\footer.css" />
+    <Content Include="assest\css\GioHang.css" />
     <Content Include="assest\css\header.css" />
     <Content Include="assest\css\SanPhamCho.css" />
     <Content Include="assest\css\SanPhamMeo.css" />
@@ -2561,6 +2562,7 @@
     <Content Include="web pages\QuenMatKhau.aspx" />
     <Content Include="web pages\SanPhamCho.aspx" />
     <Content Include="web pages\SanPhamMeo.aspx" />
+    <Content Include="web pages\ThanhToanDonHang.aspx" />
     <Content Include="web pages\TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -2620,6 +2622,13 @@
     </Compile>
     <Compile Include="web pages\SanPhamMeo.aspx.designer.cs">
       <DependentUpon>SanPhamMeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web pages\ThanhToanDonHang.aspx.cs">
+      <DependentUpon>ThanhToanDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web pages\ThanhToanDonHang.aspx.designer.cs">
+      <DependentUpon>ThanhToanDonHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="web pages\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>

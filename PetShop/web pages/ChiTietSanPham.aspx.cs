@@ -13,6 +13,7 @@ namespace PetShop.web_pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
@@ -36,7 +37,7 @@ namespace PetShop.web_pages
                 product_detail.InnerText = product.Detail;
             }
 
-            if (request!=null)
+            if (request != null)
             {
                 string preUrl = Request.QueryString["preUrl"];
                 string id = Request.QueryString["id"];
@@ -69,6 +70,9 @@ namespace PetShop.web_pages
 
                 Response.Redirect(preUrl);
             }
+
+
+
         }
     }
 }

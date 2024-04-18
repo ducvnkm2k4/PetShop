@@ -1,0 +1,153 @@
+﻿@import url(base.css);
+@import url(header.css);
+@import url(footer.css);
+
+.title{
+    width:100%;
+    text-align:center;
+}
+
+.main_content {
+    max-width: 93%;
+    margin: 0px auto;
+    display:flex;
+    justify-content:space-between;
+    margin-block:30px;
+}
+/* danh sách sản phẩm*/
+.Container_cart{
+    border:1px solid #ccc;
+    width:63%;
+}
+.sp{
+    margin:30px;
+    display:flex;
+    position:relative;
+    padding:7px;
+
+}
+.sp:nth-child(n+2) {
+    border-top: 1px solid #ccc;
+}
+
+.sp .fa-xmark#deleteCart{
+    display:block;
+    position:absolute;
+}
+.sp .imgProduct{
+    width:170px;
+    margin-right:20px;
+}
+.sp .info{
+    width:100%;
+    font-size:20px;
+}
+.info__cost {
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+    align-items:center;
+}
+.info__cost .quantity {
+    width: 50px;
+    height: 28px;
+    outline: none;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size:20px;
+    border-radius:4px;
+    margin-inline:10px;
+}
+
+.info__cost .fa-plus, .info__cost .fa-minus {
+    font-size: 12px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    padding:7px;
+}
+/* giá trị đơn hàng*/
+.container_totalCost {
+    border: 1px solid #ccc;
+    width: 32%;
+    height:250px;
+    padding:30px;
+}
+.container_totalCost__cost {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    border-block: 1px solid #ccc;
+    margin-block: 15px;
+    padding-block:20px;
+}
+.container_totalCost__cost span{
+    color:red;
+    font-size:25px;
+}
+.container_totalCost .btnDatHang{
+    width:100%;
+    padding-block:10px;
+    outline:none;
+    border-radius:7px;
+    font-size:20px;
+    background-color:red;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .main_content{
+        display:block;
+    }
+    .Container_cart{
+        width:100%;
+    }
+    .container_totalCost{
+        width:100%;
+        margin-top:30px;
+        
+    }
+    .container_totalCost .btnDatHang{
+        max-width:60%;
+        margin:0px auto;
+        display:flex;
+        justify-content:center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main_content {
+        display: block;
+    }
+
+    .Container_cart {
+        width: 100%;
+    }
+
+    .container_totalCost {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .info__cost{
+        display:block;
+        position:relative;
+    }
+    .info__cost .ti-trash{
+        position:absolute;
+        top:0px;
+        right:0px;
+    }
+    .info__cost div{
+        margin-bottom:15px;
+    }
+    .container_totalCost .btnDatHang {
+        max-width: 60%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+
+}

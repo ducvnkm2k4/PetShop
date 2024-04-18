@@ -7,6 +7,6 @@ namespace PetShop.model
 {
     public class CartItem:Product
     {
-        public int Quantity;
+        public long Quantity;
     }
 }
