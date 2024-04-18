@@ -137,8 +137,8 @@
             </div>
             <!--SEARCH--->
             <div class="header__search">
-                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." />
-                <a href="#" class="ic_search"><i class="ti-search"style="color:black"></i></a>
+                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." runat="server"/>
+                <i class="ti-search ic_search" style="color:black"></i>
             </div>
             <!-- SHOPPING CART-->
             <div class="header__shopping_cart">
@@ -158,8 +158,8 @@
             <nav class="header__navbar">
                 <ul class="menu_list">
                     <li><a href="TrangChu.aspx">Trang chủ</a></li>
-                    <li><a href="SanPhamCho.aspx">Chó</a></li>
-                    <li><a href="SanPhamMeo.aspx">Mèo</a></li>
+                    <li><a href="SanPham.aspx?type=cho" id="hd_cho" runat="server">Chó</a></li>
+                    <li><a href="SanPham.aspx?type=meo" id="hd_meo" runat="server">Mèo</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
@@ -227,5 +227,6 @@
             <h4>Trần Kim Quang Vinh</h4>
         </div>
     </footer>
+    <script src="../assest/js/Search.js"></script>
 </body>
 </html>

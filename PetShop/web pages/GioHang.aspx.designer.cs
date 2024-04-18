@@ -24,6 +24,15 @@ namespace PetShop.web_pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl taikhoan;
 
         /// <summary>
+        /// txtSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSearch;
+
+        /// <summary>
         /// numOfProduct control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,24 @@ namespace PetShop.web_pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl taikhoannavbar;
+
+        /// <summary>
+        /// hd_cho control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hd_cho;
+
+        /// <summary>
+        /// hd_meo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hd_meo;
 
         /// <summary>
         /// Container_cart control.

@@ -15,7 +15,7 @@ namespace PetShop.web_pages
         protected void Page_Load(object sender, EventArgs e)
         {
             List<Product> products = Application.Get(Global.LIST_PRODUCT) as List<Product>;
-            product_list.InnerHtml = Code.HienProducts(12, "",products);
+            product_list.InnerHtml = Code.HienProducts(12, "",products,"");
 
 
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";

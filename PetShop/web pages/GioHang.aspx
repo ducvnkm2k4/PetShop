@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="PetShop.web_pages.GioHang" %>
-
+<%@ Import Namespace="PetShop" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,8 +34,8 @@
             </div>
             <!--SEARCH--->
             <div class="header__search">
-                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." />
-                <a href="#" class="ic_search"><i class="ti-search"style="color:black"></i></a>
+                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." runat="server"/>
+                <i class="ti-search ic_search" style="color:black"></i>
             </div>
             <!-- SHOPPING CART-->
             <div class="header__shopping_cart">
@@ -55,8 +55,8 @@
             <nav class="header__navbar">
                 <ul class="menu_list">
                     <li><a href="TrangChu.aspx">Trang chủ</a></li>
-                    <li><a href="SanPhamCho.aspx">Chó</a></li>
-                    <li><a href="SanPhamMeo.aspx">Mèo</a></li>
+                    <li><a href="SanPham.aspx?type=cho" id="hd_cho" runat="server">Chó</a></li>
+                    <li><a href="SanPham.aspx?type=meo" id="hd_meo" runat="server">Mèo</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
@@ -68,8 +68,6 @@
         <h1 class="title">Giỏ hàng của bạn</h1>
         <div class="main_content">
             <section class="Container_cart" id="Container_cart" runat="server">
-
-                
                 <div class="sp">
                     <a href="ChiTietSanPham.aspx?pi=4"> <img src="../assest/images/Cho/sp-04.jpg" class="imgProduct"/></a>
                     <div class="info">
@@ -94,8 +92,11 @@
                     Thành tiền:
                     <span id="totalCost" runat="server">12146532315</span>
                 </div>
+
                 <div>
-                    <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
+                    <a href="ThanhToanDonHang.aspx">
+                        <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
+                    </a>
                 </div>
             </section>
         </div>
@@ -119,38 +120,13 @@
             <h4>Trần Kim Quang Vinh</h4>
         </div>
     </footer>
+    <div id="serverData" data-value="<%=Application.Get(Global.LIST_SHOPPING_CART) %>"></div>
 
-    <script type="text/javascript">
-        var quantity = document.getElementById("quantity");
-
-        quantity.addEventListener("keydown", function (event) {
-            var charCode = event.which || event.keyCode;
-            var quantityValue = quantity.value;
-
-            if ((charCode >= 48 && charCode <= 57) || charCode === 8 || charCode === 46) {
-                if (parseInt(quantityValue) > 5000 && (charCode >= 48 && charCode <= 57)) {
-                    event.preventDefault();
-                }
-            } else {
-                event.preventDefault();
-            }
-        });
-
-
-        quantity.addEventListener("input", function (event) {
-            var quantityValue = quantity.value;
-
-            if (quantityValue === "") {
-                quantity.value = 0;
-            } else if (quantityValue.indexOf("0") === 0) {
-                quantity.value = quantityValue.slice(1);
-            }
-            
-        });
-
-        
-
-
+    
+    <script src="../assest/js/QuantityInput.js"></script>
+    <script src="../assest/js/Search.js"></script>
+    <script>
     </script>
+
 </body>
 </html>

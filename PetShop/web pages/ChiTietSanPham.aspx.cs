@@ -1,4 +1,5 @@
-﻿using PetShop.model;
+﻿using Newtonsoft.Json;
+using PetShop.model;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,7 +14,7 @@ namespace PetShop.web_pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            List<Product> products = Application.Get(Global.LIST_PRODUCT) as List<Product>;
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
@@ -22,12 +23,12 @@ namespace PetShop.web_pages
 
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
+          
 
             ///Request
             string ID = Request.QueryString["pi"];
             string request = Request.QueryString["request"];
-            List<Product> products = Application.Get(Global.LIST_PRODUCT) as List<Product>;
-            List<CartItem> cartItems = Session[Global.LIST_SHOPPING_CART] as List<CartItem>;
+            
             if (ID != null)
             {
                 Product product = products.Find(p => p.Id.Equals(ID));
@@ -36,43 +37,38 @@ namespace PetShop.web_pages
                 product_price.InnerText = product.Price.ToString("#,0", new CultureInfo("vi-VN")) + " ₫";
                 product_detail.InnerText = product.Detail;
             }
+        }
 
-            if (request != null)
+        protected void btnAdd_click(object sender,EventArgs eventArgs)
+        {
+            string ID = Request.QueryString["pi"];
+            List<Product> products = Application.Get(Global.LIST_PRODUCT) as List<Product>;
+            List<CartItem> cartItems = Session[Global.LIST_SHOPPING_CART] as List<CartItem>;
+            Product product = products.Find(p => p.Id.Equals(ID));
+            CartItem cartItem = cartItems.Find(ci => ci.Id.Equals(ID));
+
+            if (cartItem == null)
             {
-                string preUrl = Request.QueryString["preUrl"];
-                string id = Request.QueryString["id"];
-                Product product = products.Find(p => p.Id.Equals(id));
-                CartItem cartItem = cartItems.Find(ci => ci.Id.Equals(id));
-
-                if (cartItem == null)
+                cartItem = new CartItem
                 {
-                    cartItem = new CartItem
-                    {
-                        Id = product.Id,
-                        Name = product.Name,
-                        Price = product.Price,
-                        Detail = product.Detail,
-                        Type = product.Type,
-                        Image = product.Image,
-                        Quantity = 1
-                    };
-                    cartItems.Add(cartItem);
-                    Session[Global.LIST_SHOPPING_CART] = cartItems;
-                }
-                else
-                {
-                    cartItems.Remove(cartItem);
-                    cartItem.Quantity += 1;
-                    cartItems.Add(cartItem);
-                    Session[Global.LIST_SHOPPING_CART] = cartItems;
-                }
-
-
-                Response.Redirect(preUrl);
+                    Id = product.Id,
+                    Name = product.Name,
+                    Price = product.Price,
+                    Detail = product.Detail,
+                    Type = product.Type,
+                    Image = product.Image,
+                    Quantity = 1
+                };
+                cartItems.Add(cartItem);
+                Session[Global.LIST_SHOPPING_CART] = cartItems;
             }
-
-
-
+            else
+            {
+                cartItems.Remove(cartItem);
+                cartItem.Quantity += 1;
+                cartItems.Add(cartItem);
+                Session[Global.LIST_SHOPPING_CART] = cartItems;
+            }
         }
     }
 }

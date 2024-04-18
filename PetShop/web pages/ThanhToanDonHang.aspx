@@ -60,7 +60,30 @@
 
 
     <section class="Dondathang">
-        <h2>Đơn đặt hàng</h2>
+        <h2>Đơn hàng của bạn</h2>
+        <section class="list_ProductSelected_container">
+            <a href="ChiTietSanPham.aspx?pi=4"> <img src="../assest/images/Cho/sp-04.jpg" class="imgProduct"/></a>
+            <div class="info">
+                <a href="ChiTietSanPham.aspx?pi=4" style="color:black;"><h3 class="info__name">Sữa Tắm SOS Cho Chó Lông Trắng</h3></a>
+                <div class="info__cost">
+                    <div class="price">Giá:120000</div>
+                    <div class="quantity">số lượng:1</div>
+                    <div class="totalCostProduct">Tổng:120000</div>
+                </div>
+            </div>
+        </section>
+        <section class="cost">
+            <div class="container_totalCost__cost">
+                Thành tiền:
+                <span id="totalCost" runat="server">12146532315</span>
+            </div>
+
+            <div>
+                <a href="ThanhToanDonHang.aspx">
+                    <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
+                </a>
+            </div>
+        </section>
     </section>
 </body>
 </html>

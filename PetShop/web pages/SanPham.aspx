@@ -1,21 +1,21 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SanPhamCho.aspx.cs" Inherits="PetShop.web_pages.SanPhamCho" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SanPham.aspx.cs" Inherits="PetShop.web_pages.SanPhamMeo" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Cửa hàng bán đồ và phụ kiện cho thú cưng</title>
-
-     <!---- link font icon --->
+    <!---- link font icon --->
     <link rel="stylesheet" href="../assest/font/themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="../assest/font/fontawesome-free-6.5.2-web/css/all.min.css" />
-
+    
     <!---- css -->
-    <link rel="stylesheet" href="../assest/css/SanPhamCho.css" />
+    <link rel="stylesheet" href="../assest/css/SanPhamMeo.css" />
     <link rel="stylesheet" href="../assest/css/TrangChu.css" />
 </head>
 <body>
 
-   <header class="header">
+    <header class="header">
         <input type="checkbox" class="check_navBar" name="check_navBar" id="check_navBar" hidden="hidden"/>
         <label for="check_navBar" class="overLayNavBar"></label>
         <!-- TOP BAR--->
@@ -36,8 +36,8 @@
             </div>
             <!--SEARCH--->
             <div class="header__search">
-                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." />
-                <a href="#" class="ic_search"><i class="ti-search"style="color:black"></i></a>
+                <input type="text" name="txtSearch" id="txtSearch" placeholder="Bạn cần tìm gì...." runat="server"/>
+                <i class="ti-search ic_search" style="color:black"></i>
             </div>
             <!-- SHOPPING CART-->
             <div class="header__shopping_cart">
@@ -57,23 +57,25 @@
             <nav class="header__navbar">
                 <ul class="menu_list">
                     <li><a href="TrangChu.aspx">Trang chủ</a></li>
-                    <li><a href="SanPhamCho.aspx" style="color:#FA8072;" >Chó</a></li>
-                    <li><a href="SanPhamMeo.aspx">Mèo</a></li>
+                     <li><a href="SanPham.aspx?type=cho" id="hd_cho" runat="server">Chó</a></li>
+                    <li><a href="SanPham.aspx?type=meo" id="hd_meo" runat="server">Mèo</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
         <div class="anhbia">
-            <img src="../assest/images/cho.png" alt="hình ảnh" class="img_bia" style="width:100%"/>
+            <img src="../assest/images/meo.png" alt="hình ảnh" class="img_bia" style="width:100%" id="banner" runat="server"/>
         </div>
 
-        <h1 class="title">Sản phẩm dành cho chó</h1>
+        <h1 class="title" id="title" runat="server">Sản phẩm dành cho mèo</h1>
 
         <div class="product-list" id="product_list" runat="server"></div>
     </main>
+
     <footer class="footer">
         <div class="footer_left">
             <h3>PET</h3>
@@ -91,5 +93,7 @@
             <h4>Trần Kim Quang Vinh</h4>
         </div>
     </footer>
+
+    <script src="../assest/js/Search.js"></script>
 </body>
 </html>

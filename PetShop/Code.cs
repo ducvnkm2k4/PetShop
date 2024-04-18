@@ -10,7 +10,7 @@ namespace PetShop
 {
     public class Code
     {
-        public static string HienProducts(int num, string Type, List<Product> products)
+        public static string HienProducts(int num, string Type, List<Product> products,string key)
         {
             StringBuilder stringBuilder = new StringBuilder();
             if (num > products.Count)
@@ -22,7 +22,7 @@ namespace PetShop
             {
                 if (num == 0) break;
 
-                if (Type == "" || item.Type.Equals(Type))
+                if (Type == "" || item.Type.Equals(Type)||(Type.Equals("search")&&item.Name.ToLower().Contains(key.ToLower())))
                 {
                     num--;
                     stringBuilder.Append("<div class='product product" + temp++ + "'>");
