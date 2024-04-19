@@ -135,10 +135,10 @@
 }
 
 .product {
+    width:90%;
+    margin:10px auto;
     box-sizing: border-box;
     border: 1px solid #fd6f5f;
-    margin-right: 25px;
-    margin-bottom: 25px;
     cursor: pointer;
     text-align: center;
     color: black;

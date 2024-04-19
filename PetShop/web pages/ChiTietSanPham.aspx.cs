@@ -69,6 +69,7 @@ namespace PetShop.web_pages
                 cartItems.Add(cartItem);
                 Session[Global.LIST_SHOPPING_CART] = cartItems;
             }
+            Response.Redirect(Request.UrlReferrer.ToString());
         }
     }
 }

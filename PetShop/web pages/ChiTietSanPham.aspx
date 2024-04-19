@@ -90,7 +90,10 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Thêm vào giỏ hàng" class="btnadd" id="btnadd" />
+            <form id="form1" runat="server">
+                <asp:Button class="btnadd" id="btnadd" Text="Thêm vào giỏ hàng" OnClick="btnAdd_click"  runat="server"/>
+            </form>
+            
         </div>
 
     </main>

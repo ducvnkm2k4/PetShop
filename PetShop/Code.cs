@@ -31,7 +31,7 @@ namespace PetShop
                    , item.Name
                    , item.Id
                    );
-                    stringBuilder.AppendFormat("<div class='product-name'><a href='ChiTiet.aspx?pi={1}' title='Xem {0}'>{0}</a></div>"
+                    stringBuilder.AppendFormat("<div class='product-name'><a href='ChiTietSanPham.aspx?pi={1}' title='Xem {0}'>{0}</a></div>"
                         , item.Name
                         , item.Id
                         );
