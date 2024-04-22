@@ -2535,10 +2535,8 @@
     <Content Include="assest\images\Cho\sp-08.jpg" />
     <Content Include="assest\images\Cho\sp-09.jpg" />
     <Content Include="assest\images\Cho\sp-10.jpg" />
-    <Content Include="assest\images\gif.gif" />
+    <Content Include="assest\images\gio_hang_trong.png" />
     <Content Include="assest\images\logomeo.jpg" />
-    <Content Include="assest\images\meo-03.png" />
-    <Content Include="assest\images\meo-04.png" />
     <Content Include="assest\images\meo.png" />
     <Content Include="assest\images\meo1.jpg" />
     <Content Include="assest\images\meo2.png" />
@@ -2554,7 +2552,6 @@
     <Content Include="assest\images\Meo\sp-20.jpg" />
     <Content Include="assest\images\pk1.jpg" />
     <Content Include="assest\js\checkInput.js" />
-    <Content Include="assest\js\QuantityInput.js" />
     <Content Include="assest\js\Search.js" />
     <Content Include="assest\js\slideshow.js" />
     <Content Include="assest\css\QuenMatKhau.css" />
@@ -2694,7 +2691,6 @@
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-solid-900.woff2" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-v4compatibility.ttf" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-v4compatibility.woff2" />
-    <Content Include="assest\images\gio_hang_trong.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="PetShop.web_pages.GioHang" %>
-<%@ Import Namespace="PetShop" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +12,7 @@
 
 </head>
 <body>
-   <header class="header">
+    <header class="header">
         <input type="checkbox" class="check_navBar" name="check_navBar" id="check_navBar" hidden="hidden"/>
         <label for="check_navBar" class="overlay" id="overLayNavBar"></label>
         <!-- TOP BAR--->
@@ -63,7 +62,6 @@
             </nav>
         </div>
     </header>
-    <img src="../assest/images/gio_hang_trong.webp" />
     <main>
         <h1 class="title">Giỏ hàng của bạn</h1>
         <div class="main_content" runat="server" id="main_content">
@@ -75,9 +73,14 @@
                         <div class="info__cost">
                             <div class="price">Giá:120000</div>
                             <div>
-                                <i class="fa-solid fa-plus" id="plus" runat="server"></i>
-                                <input type="text" id="quantity" class="quantity" value="1" />
-                                <i class="fa-solid fa-minus"></i>
+                                <a href="GioHang.aspx?request=minus&id=4">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <input type="text" id="quantity" class="quantity" value="1" tabindex="-1"/>
+                                 <a href="GioHang.aspx?request=plus&id=4">
+                                     <i class="fa-solid fa-plus"></i>
+                                 </a>
+                                
                             </div>
                             <div class="totalCostProduct">Tổng:120000</div>
                             <i class="ti-trash" style="cursor:pointer;"></i>
@@ -118,10 +121,13 @@
             <h4>Trần Kim Quang Vinh</h4>
         </div>
     </footer>
-    <div id="serverData" data-value="<%=Application.Get(Global.LIST_SHOPPING_CART) %>"></div>
 
     
-    <script src="../assest/js/QuantityInput.js"></script>
+    <script>
+        document.getElementById("quantity").addEventListener("keydown", function (event) {
+            event.preventDefault();
+        }); 
+    </script>
     <script src="../assest/js/Search.js"></script>
     <script>
     </script>
