@@ -1,0 +1,144 @@
+﻿@import url(base.css);
+:root{
+    --boder:1px solid #ccc;
+}
+body {
+    
+    max-width:95%;
+}
+span{
+    color:red;
+}
+.title{
+    padding-bottom:20px;
+    border-bottom:var(--boder);
+    margin-bottom:15px;
+    
+}
+.container {
+    display: flex;
+    justify-content: center;
+    padding-inline:5px;
+}
+/* thông tin khách hàng*/
+.customerInfo {
+    min-width: 330px;
+    border: var(--boder);
+    padding: 25px 30px 30px 30px;
+}
+
+.customerInfo .inpText {
+    width: 100%;
+    height: 34px;
+    border-radius: 7px;
+    border: var(--boder);
+    outline: none;
+    padding-inline: 20px;
+}
+.customerInfo h3{
+    margin-top:20px;
+    margin-bottom:15px;
+}
+/* phương thức thanh toán*/
+.paymentMethod {
+    min-width: 370px;
+    border: var(--boder);
+    margin-inline: 20px;
+    padding: 25px 30px 30px 30px;
+}
+.paymentContainer div{
+    padding:15px 30px;
+    font-size:20px;
+}
+.paymentContainer div:first-child{
+    border:var(--boder);
+}
+.paymentContainer div:nth-child(n+2){
+    border-inline:var(--boder);
+    border-bottom:var(--boder);
+}
+/* thông tin đơn hàng */
+.orderInfo {
+    min-width: 370px;
+    border: var(--boder);
+    padding: 25px 30px 30px 30px;
+}
+.title_orderInfo {
+    padding-bottom: 20px;
+    border-bottom: var(--boder);
+    margin-bottom: 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.list_ProductSelected_container .cartitem {
+    display: flex;
+    justify-content: space-between;
+}
+.list_ProductSelected_container .cartitem:nth-child(n+2){
+    margin-top:20px;
+    padding-top:15px;
+    border-top:var(--boder);
+}
+.list_ProductSelected_container .cartitem:last-child{
+    border-bottom:1px solid #ccc;
+    padding-bottom:15px;
+    margin-bottom:20px;
+}
+.list_ProductSelected_container .imgProduct{
+    width:100px;
+    margin-right:15px;
+}
+.cost {
+    border-top: var(--boder);
+    padding-block:15px;
+    font-size:20px;
+}
+.container_totalCost__cost{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+.cost .btnDatHang{
+    width:100%;
+    height:54px;
+    border-radius:7px;
+    border:none;
+    background-color:red;
+    color:white;
+    font-size:20px;
+}
+@media (max-width:1024px) {
+    body{
+        display:grid;
+        grid-template-areas:
+            "aa bb"
+            "cc cc";
+    }
+    .customerInfo{
+        grid-area:aa;
+    }
+    .paymentMethod{
+        grid-area:bb;
+        margin-right:0px;
+    }
+    .orderInfo{
+        grid-area:cc;
+        margin-top:20px;
+    }
+
+}
+
+@media (max-width:768px){
+    body{
+        display:block;
+    }
+
+    .paymentMethod{
+        margin-block:20px;
+        margin-left:0px;
+    }
+    .orderInfo{
+        margin:0px;
+    }
+}

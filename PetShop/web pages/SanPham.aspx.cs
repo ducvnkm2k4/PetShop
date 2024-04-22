@@ -36,6 +36,7 @@ namespace PetShop.web_pages
                 case "cho":
                     title.InnerText = "Sản phẩm cho chó";
                     hd_cho.Style["color"] = "#FA8072;";
+                    banner.Attributes["src"] = "../assest/images/cho.png";
                     break;
                 case "meo":
                     title.InnerText = "sản phẩm cho mèo";

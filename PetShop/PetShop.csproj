@@ -78,6 +78,7 @@
     <Content Include="assest\css\header.css" />
     <Content Include="assest\css\SanPhamCho.css" />
     <Content Include="assest\css\SanPhamMeo.css" />
+    <Content Include="assest\css\DonDatHang.css" />
     <Content Include="assest\css\TrangChu.css" />
     <Content Include="assest\css\Dangky.css" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\css\all.css" />
@@ -2552,6 +2553,7 @@
     <Content Include="assest\images\Meo\sp-19.png" />
     <Content Include="assest\images\Meo\sp-20.jpg" />
     <Content Include="assest\images\pk1.jpg" />
+    <Content Include="assest\js\checkInput.js" />
     <Content Include="assest\js\QuantityInput.js" />
     <Content Include="assest\js\Search.js" />
     <Content Include="assest\js\slideshow.js" />
@@ -2563,7 +2565,7 @@
     <Content Include="web pages\GioHang.aspx" />
     <Content Include="web pages\QuenMatKhau.aspx" />
     <Content Include="web pages\SanPham.aspx" />
-    <Content Include="web pages\ThanhToanDonHang.aspx" />
+    <Content Include="web pages\DonDatHang.aspx" />
     <Content Include="web pages\TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -2617,12 +2619,12 @@
     <Compile Include="web pages\SanPham.aspx.designer.cs">
       <DependentUpon>SanPham.aspx</DependentUpon>
     </Compile>
-    <Compile Include="web pages\ThanhToanDonHang.aspx.cs">
-      <DependentUpon>ThanhToanDonHang.aspx</DependentUpon>
+    <Compile Include="web pages\DonDatHang.aspx.cs">
+      <DependentUpon>DonDatHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="web pages\ThanhToanDonHang.aspx.designer.cs">
-      <DependentUpon>ThanhToanDonHang.aspx</DependentUpon>
+    <Compile Include="web pages\DonDatHang.aspx.designer.cs">
+      <DependentUpon>DonDatHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="web pages\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
@@ -2692,6 +2694,7 @@
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-solid-900.woff2" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-v4compatibility.ttf" />
     <Content Include="assest\font\fontawesome-free-6.5.2-web\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="assest\images\gio_hang_trong.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

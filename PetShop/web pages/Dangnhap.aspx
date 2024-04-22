@@ -10,59 +10,8 @@
     <link rel="stylesheet" href="../assest/font/fontawesome-free-6.5.2-web/css/all.min.css" />
 
     <link rel="stylesheet" href="../assest/css/Dangnhap.css" />
-
+    <script src="../assest/js/checkInput.js"></script>
     <script type="text/javascript">
-        function checkInputFormLogin() {
-            let txtGmail = document.getElementById("txtGmail");
-            let NotifyGmail = document.getElementById("notifyEmail");
-            let txtpassword = document.getElementById("txtPassword");
-            let notifypassword = document.getElementById("notifyPassword");
-            if (txtGmail.value.trim().length == 0) {
-                txtGmail.focus();
-                txtGmail.select();
-                txtGmail.style.border = "1px solid red";
-                NotifyGmail.innerText = "gmail đang trống";
-                return false;
-            } else {
-                txtGmail.style.border = "1px solid black";
-                NotifyGmail.innerText = "";
-            }
-
-            if (txtpassword.value.trim().length == 0) {
-                txtpassword.focus();
-                txtPassword.select();
-                txtpassword.style.border = "1px solid red";
-                notifypassword.innerText = "mật khẩu đang trống";
-                return false;
-            } else {
-                txtpassword.style.border = "1px solid black";
-                notifypassword.innerText = "";
-            }
-
-            if (txtGmail.value.indexOf("@gmail.com") < 0) {
-                txtGmail.focus();
-                txtGmail.select();
-                txtGmail.style.border = "1px solid red";
-                NotifyGmail.innerText = "gmail không đúng định dạng (có chứa '@gmail.com' và không chứa ký tự tiếng việt)";
-                return false;
-            } else {
-                txtGmail.style.border = "1px solid black";
-                NotifyGmail.innerText = "";
-            }
-
-            if (txtpassword.value.trim().length < 6) {
-                txtpassword.focus();
-                txtPassword.select();
-                txtpassword.style.border = "1px solid red";
-                notifypassword.innerText = "mật khẩu cần ít nhất 6 ký tự";
-                return false;
-            } else {
-                txtpassword.style.border = "1px solid black";
-                notifypassword.innerText = "";
-            }
-            return true;
-        }
-
         function onfocusInput(input, notify) {
             input.style.border = "1px solid black";
             notify.innerText = "";
@@ -112,7 +61,7 @@
             <nav class="header__navbar">
                 <ul class="menu_list">
                     <li><a href="TrangChu.aspx">Trang chủ</a></li>
-                    <<li><a href="SanPham.aspx?type=cho" id="hd_cho" runat="server">Chó</a></li>
+                    <li><a href="SanPham.aspx?type=cho" id="hd_cho" runat="server">Chó</a></li>
                     <li><a href="SanPham.aspx?type=meo" id="hd_meo" runat="server">Mèo</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Liên hệ</a></li>

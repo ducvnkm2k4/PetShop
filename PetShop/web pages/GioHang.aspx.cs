@@ -49,13 +49,7 @@ namespace PetShop.web_pages
             }
             if (total == 0)
             {
-                Container_cart.InnerHtml = "<h2>Hiện không có sản phẩm nào trong giỏ hàng</h2>";
-                Container_cart.Style["border"] = "none";
-                Container_cart.Style["display"] = "flex";
-
-                Container_cart.Style["justify-content"] = "center";
-                Container_cart.Style["align-items"] = "center";
-                totalCost.InnerText = total.ToString("#,0", new CultureInfo("vi-VN")) + " ₫";
+                main_content.InnerHtml = "<img src='../assest/images/gio_hang_trong.webp' alt='Giỏ hàng của bạn hiện đang trống' class='empty_cart'/>";
             }
             else
             {

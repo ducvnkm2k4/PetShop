@@ -63,10 +63,10 @@
             </nav>
         </div>
     </header>
-    
+    <img src="../assest/images/gio_hang_trong.webp" />
     <main>
         <h1 class="title">Giỏ hàng của bạn</h1>
-        <div class="main_content">
+        <div class="main_content" runat="server" id="main_content">
             <section class="Container_cart" id="Container_cart" runat="server">
                 <div class="sp">
                     <a href="ChiTietSanPham.aspx?pi=4"> <img src="../assest/images/Cho/sp-04.jpg" class="imgProduct"/></a>
@@ -94,9 +94,7 @@
                 </div>
 
                 <div>
-                    <a href="ThanhToanDonHang.aspx">
-                        <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
-                    </a>
+                    <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
                 </div>
             </section>
         </div>

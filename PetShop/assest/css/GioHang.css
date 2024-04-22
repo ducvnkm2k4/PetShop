@@ -90,11 +90,11 @@
 .container_totalCost .btnDatHang{
     width:100%;
     padding-block:10px;
-    outline:none;
     border-radius:7px;
     font-size:20px;
     background-color:red;
     color:white;
+    border:none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
