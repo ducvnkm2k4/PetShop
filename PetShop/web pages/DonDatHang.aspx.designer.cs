@@ -15,6 +15,15 @@ namespace PetShop.web_pages
     {
 
         /// <summary>
+        /// form_container control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form_container;
+
+        /// <summary>
         /// title_login control.
         /// </summary>
         /// <remarks>

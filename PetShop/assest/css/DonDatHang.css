@@ -2,9 +2,9 @@
 :root{
     --boder:1px solid #ccc;
 }
-body {
-    
-    max-width:95%;
+body{
+    display:flex;
+    justify-content:center;
 }
 span{
     color:red;
@@ -16,9 +16,9 @@ span{
     
 }
 .container {
-    display: flex;
-    justify-content: center;
-    padding-inline:5px;
+    display:grid;
+    grid-template-columns:330px 370px 370px;
+    margin-block:30px;
 }
 /* thông tin khách hàng*/
 .customerInfo {
@@ -71,10 +71,6 @@ span{
     justify-content:space-between;
     align-items:center;
 }
-.list_ProductSelected_container .cartitem {
-    display: flex;
-    justify-content: space-between;
-}
 .list_ProductSelected_container .cartitem:nth-child(n+2){
     margin-top:20px;
     padding-top:15px;
@@ -108,15 +104,15 @@ span{
     color:white;
     font-size:20px;
 }
-@media (max-width:1024px) {
-    body{
+@media (max-width:1150px) {
+    .container {
         display:grid;
-        grid-template-areas:
-            "aa bb"
-            "cc cc";
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:"aa bb"
+                            "cc cc";
     }
-    .customerInfo{
-        grid-area:aa;
+    .customerInfo {
+        grid-area: aa;
     }
     .paymentMethod{
         grid-area:bb;
@@ -130,8 +126,8 @@ span{
 }
 
 @media (max-width:768px){
-    body{
-        display:block;
+    .container {
+       display:block;
     }
 
     .paymentMethod{
