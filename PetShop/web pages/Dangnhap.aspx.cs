@@ -25,11 +25,11 @@ namespace PetShop.web_pages
             //request
             string request = Request.QueryString["request"];
             string preUrl = Request.QueryString["preUrl"];
-            Session[Global.PREURL] = preUrl;
             if (request =="dangxuat")
             {
+                Session[Global.LIST_SHOPPING_CART] = new List<CartItem>();
                 Session[Global.CUSTOMER_NAME] = "";
-                Session[Global.PREURL] = preUrl;
+                Session[Global.CUSTOMER_ID] = "";
                 Response.Redirect(preUrl);
                 
             }
@@ -45,7 +45,7 @@ namespace PetShop.web_pages
                 if (customer != null)
                 {
                     Session[Global.CUSTOMER_NAME] = customer.Name;
-                    Session[Global.PREURL] = preUrl;
+                    Session[Global.CUSTOMER_ID] = customer.Id;
                     Response.Redirect(preUrl);
                 }
                 else

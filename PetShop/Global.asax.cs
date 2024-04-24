@@ -16,13 +16,13 @@ namespace PetShop
         public const string LIST_PRODUCT = "ListProduct";
         public const string LIST_SHOPPING_CART = "ListShoppingCart";
         public const string CUSTOMER_NAME = "nameCustomer";
-        public const string PREURL = "preurl";
+        public const string CUSTOMER_ID = "customerId";
         protected void Application_Start(object sender, EventArgs e)
         {
             Application[Global.LIST_INFO_CUSTOMER] = new List<Customer>
             {
-                new Customer{Name="Hoàng anh",Email="anh@gmail.com",Password="anh123456",PhoneNumber="123456789",Address="Định công"},
-                new Customer{Name="Việt anh",Email="Vanh@gmail.com",Password="Vanh123",PhoneNumber="123455612",Address="Định công"}
+                new Customer{Id=1,Name="Hoàng anh",Email="anh@gmail.com",Password="anh123456",PhoneNumber="123456789",Address="Định công"},
+                new Customer{Id=2,Name="Việt anh",Email="Vanh@gmail.com",Password="Vanh123",PhoneNumber="123455612",Address="Định công"}
 
             };
 
@@ -215,7 +215,7 @@ namespace PetShop
         {
             Session[Global.LIST_SHOPPING_CART] = new List<CartItem>();
             Session[Global.CUSTOMER_NAME] = "";
-            Session[Global.PREURL] = "";
+            Session[Global.CUSTOMER_ID] = "";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

@@ -6,34 +6,36 @@
 <head runat="server">
     <title>Cửa hàng bán đồ và phụ kiện cho thú cưng</title>
     <link rel="stylesheet" href="../assest/css/DonDatHang.css" />
+
+    <script src="../assest/js/checkInput.js"></script>
 </head>
 <body>
-    <form id="form_container" class="container" runat="server">
+    <form id="form_container" class="container" runat="server" onsubmit="return checkInputFormOrder()">
         <section class="customerInfo">
             <h2 class="title">Thông tin khách hàng</h2>
-            <h4 id="title_login" runat="server">Bạn đã có tài khoản? hãy <span>đăng nhập.</span></h4>
+            <h4 id="title_login" runat="server">Bạn đã có tài khoản? hãy <a href="Dangnhap.aspx?preUrl=<%=Request.Url.AbsoluteUri %>"><span>đăng nhập.</span></a> </h4>
             <div class="orderInfo__customerInfo">
                 <div class="customerInfo__Name">
                     <h3>Họ và tên <span>*</span></h3>
-                    <input type="text" id="txtName" name="txtName" placeholder="nguyễn văn a" class="inpText" onfocus="onfocusInput(this,notifyName)"/>
+                    <input type="text" id="txtName" name="txtName" placeholder="nguyễn văn a" class="inpText" onfocus="onfocusInput(this,notifyName)" runat="server"/>
                     <div><span id="notifyName"></span></div>
                 </div>
 
                 <div class="CustomerInfo__gmail">
                     <h3>Gmail<span>*</span></h3>
-                    <input type="text" id="txtGmail" name="txtGmail" placeholder="abc@gmail.com" class="inpText" onfocus="onfocusInput(this,notifyGmail)"/>
+                    <input type="text" id="txtGmail" name="txtGmail" placeholder="abc@gmail.com" class="inpText" onfocus="onfocusInput(this,notifyGmail)" runat="server" />
                     <div><span id="notifyGmail"></span></div>
                 </div>
 
                 <div class="CustomerInfo__SDT">
                     <h3>Số điện thoại<span>*</span></h3>
-                    <input type="text" id="txtSDT" name="txtSDT" placeholder="số điện thoại" class="inpText" onfocus="onfocusInput(this,notifySDT)"/>
+                    <input type="text" id="txtSDT" name="txtSDT" placeholder="số điện thoại" class="inpText" onfocus="onfocusInput(this,notifySDT)" runat="server"/>
                     <div><span id="notifySDT"></span></div>
                 </div>
 
                 <div class="CustomerInfo__Address">
                     <h3>Địa chỉ<span>*</span></h3>
-                    <input type="text" id="txtDiaChi" name="txtDiaChi" placeholder="địa chỉ" class="inpText" onfocus="onfocusInput(this,notifyDiaChi)"/>
+                    <input type="text" id="txtDiaChi" name="txtDiaChi" placeholder="địa chỉ" class="inpText" onfocus="onfocusInput(this,notifyDiaChi)" runat="server"/>
                     <div><span id="notifyDiaChi"></span></div>
                 </div>
                 <div class="customerInfo__Note">
@@ -73,7 +75,7 @@
             </div>
         
 
-            <section class="list_ProductSelected_container">
+            <section class="list_ProductSelected_container" id="cartItem_container" runat="server">
                 <div class="cartitem" style="display:flex;">
                     <img src="../assest/images/Cho/sp-04.jpg" class="imgProduct" style="margin-right: 15px"/>
                     <div class="infor_CartItem">
@@ -87,13 +89,11 @@
             <section class="cost">
                 <div class="container_totalCost__cost">
                     Thành tiền:
-                    <span id="totalCost" runat="server">12146532315</span>
+                    <span id="totalCostElement" runat="server">12146532315</span>
                 </div>
 
                 <div>
-                    <a href="ThanhToanDonHang.aspx">
-                        <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
-                    </a>
+                    <asp:Button id="btnDatHang" class="btnDatHang" Text="Đặt hàng" OnClick="btnDatHang_Click" runat="server"/>
                 </div>
             </section>
         </section>

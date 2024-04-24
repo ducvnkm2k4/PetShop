@@ -28,6 +28,7 @@ namespace PetShop.web_pages
                 List<Customer> customers = Application.Get(Global.LIST_INFO_CUSTOMER) as List<Customer>;
                 Customer customer = new Customer();
 
+                customer.Id = customers.Count() + 1;
                 customer.Name = Request.Form["txtName"];
                 customer.Email = Request.Form["txtgmail"];
                 customer.PhoneNumber = Request.Form["txtSDT"];
@@ -37,8 +38,7 @@ namespace PetShop.web_pages
                 customers.Add(customer);
                 Application[Global.LIST_INFO_CUSTOMER] = customers;
                 Session[Global.CUSTOMER_NAME] = Request.Form["txtName"];
-
-                Response.Redirect(preurl);
+                Session[Global.CUSTOMER_ID] = customer.Id;
             }
         }
     }

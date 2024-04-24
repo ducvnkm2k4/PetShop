@@ -97,7 +97,9 @@
                 </div>
 
                 <div>
-                    <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
+                    <a href="DonDatHang.aspx">
+                        <input type="button" id="btnDatHang" class="btnDatHang" value="Đặt hàng" />
+                    </a>
                 </div>
             </section>
         </div>
