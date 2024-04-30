@@ -152,8 +152,12 @@
 .product-name a{
     color:black;
 }
+.product-name a:hover{
+    color: #999;
+}
 .product-price {
     color: #e9220c;
+    
     padding: 15px 0;
 }
 
@@ -201,7 +205,8 @@
     /* list sp */
     .product-list {
         grid-column: 1/13;
-        grid-template-columns: 50% 50%;
+        /*grid-template-columns: 50% 50%;*/
+        grid-template-columns: 100%;
         margin-left: 20px;
     }   
 }

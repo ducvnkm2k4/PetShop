@@ -30,7 +30,7 @@
             <!--LOGO--->
             <div class="header__logo">
                 <a href="TrangChu.aspx" class="header__logo">
-                    <img src="../assest/images/logomeo.jpg" style="width:70px" />
+                    <img src="../assest/images/logo.jpg" style="width:70px" />
                     <span>PET</span>
                 </a>
             </div>
@@ -73,11 +73,90 @@
 
         <h1 class="title" id="title" runat="server">Sản phẩm dành cho mèo</h1>
 
-        <div class="product-list" id="product_list" runat="server"></div>
+        <div class="product-list" id="product_list" runat="server">
+            <!--demo-->
+             <div class="product product1">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product2">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product3">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product4">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product5">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product6">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+            <div class="product product7">
+                <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                    <img src="../assest/images/Cho/sp-01.jpg" title="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" alt="Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg" class="product-img"/>
+                </a>
+                <div class="product-name">
+                    <a href="ChiTietSanPham.aspx?pi=1" title="xem Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg">
+                        Thức Ăn Khô Cho Chó Con Smart Heart Gold Puppy 1kg
+                    </a>
+                </div>
+                <div class="product-price">1115000</div>
+            </div>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer_left">
+    <footer class="footer" style="background-image: linear-gradient(0, #fe6433, #f53e2d)";>
+        <div class="footer_left" style="color:white";>
             <h3>PET</h3>
             <br/>
             <h4>Môn: Lập trình web cơ bản</h4>
@@ -85,7 +164,7 @@
             <h4>Giáo viên hướng dẫn: Lê Hữu Dũng</h4>
 
         </div>
-        <div class="footer_right">
+        <div class="footer_right" style="color:white";>
             <h3>Thành viên:</h3>
             <br/>
             <h4>Vũ Việt Cường</h4>

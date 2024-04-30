@@ -1,27 +1,5 @@
 ﻿@import url(base.css);
 
-
-
-
-
-/*forgot password*/
-.Container_Login .forgotPass {
-    display: none;
-}
-
-#btnForgot {
-    padding: 10px 30px;
-    background-color: #fd5e4c;
-    outline: #fd5e4c;
-    font-size: 1.1rem;
-    border-radius: 15px;
-    margin: 15px 0px;
-}
-#btnForgot:hover {
-    background-color: #e35544;
-}
-
-
 /*
     header
 */
@@ -33,10 +11,14 @@
 .check_navBar:checked ~ .overlay#overLayNavBar{
     display:block;
 }
-/*Top bar*/
-.taikhoan{
-    cursor:pointer;
+.header {
+    background-image: linear-gradient(0, #fe6433, #f53e2d);
+}
 
+/*Top bar*/
+.taikhoan {
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .taikhoan.topbar {
@@ -45,26 +27,24 @@
 .taikhoan.sidebar{
     color:black;
 }
+
 .header__topbar {
     height: 40px;
     width: 100%;
     color: white;
-    background-image: linear-gradient(0,#FFA07A,#FA8072);
     display: flex;
     justify-content: space-between;
     line-height: 40px;
     font-size: 16px;
     padding: 0px 10%;
 }
-.topbar__left {
-    text-transform: uppercase;
+.topbar__left{
+    text-transform:uppercase;
 }
-
 /*Bottom bar*/
 .header__bottombar {
     height: 70px;
     width: 100%;
-    background-color: rgb(248, 245, 245);
     display: flex;
     padding: 0px 10%;
     justify-content: space-between;
@@ -77,10 +57,10 @@
     align-items:center
 }
 .header__logo span {
-    color: #fd6f5f;
+    color: white;
     font-size: 25px;
     font-weight: 700;
-    text-decoration:underline;
+    
 }
 
 
@@ -111,13 +91,17 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    color: white;
 }
 .header__shopping_cart .ti-shopping-cart {
     font-size: 35px;
-    color: #FA8072;
+    color: white;
     padding-right: 10px;
 }
 /*nav menu*/
+.menu_list{
+    background-color: white;
+}
 .header__navbar .menu_list{
     display:flex;
     list-style:none;
@@ -131,6 +115,9 @@
     text-transform: uppercase;
     font-weight: 900;
     color: black;
+}
+.menu_list a:hover{
+    color: #999;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){

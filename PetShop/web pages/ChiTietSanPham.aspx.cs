@@ -15,20 +15,19 @@ namespace PetShop.web_pages
         protected void Page_Load(object sender, EventArgs e)
         {
             List<Product> products = Application.Get(Global.LIST_PRODUCT) as List<Product>;
+
+            //số lượng sản phẩm trong giỏ hàng
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
+            //giao diện khi đã đăng nhập và chưa đăng nhập
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
-
             KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, Request.Url.AbsoluteUri);
-
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
-          
 
-            ///Request
+            //thông tin sản phẩm
             string ID = Request.QueryString["pi"];
             string request = Request.QueryString["request"];
-            
             if (ID != null)
             {
                 Product product = products.Find(p => p.Id.Equals(ID));
@@ -39,6 +38,7 @@ namespace PetShop.web_pages
             }
         }
 
+        //thêm sản phẩm vào giỏ hàng
         protected void btnAdd_click(object sender,EventArgs eventArgs)
         {
             string ID = Request.QueryString["pi"];

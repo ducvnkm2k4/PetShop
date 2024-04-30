@@ -2536,7 +2536,7 @@
     <Content Include="assest\images\Cho\sp-09.jpg" />
     <Content Include="assest\images\Cho\sp-10.jpg" />
     <Content Include="assest\images\gio_hang_trong.png" />
-    <Content Include="assest\images\logomeo.jpg" />
+    <Content Include="assest\images\logo.jpg" />
     <Content Include="assest\images\meo.png" />
     <Content Include="assest\images\meo1.jpg" />
     <Content Include="assest\images\meo2.png" />
@@ -2633,7 +2633,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assest\images\pkmeo.webp" />
     <Content Include="assest\font\themify-icons\fonts\themify.eot" />
     <Content Include="assest\font\themify-icons\fonts\themify.ttf" />
     <Content Include="assest\font\themify-icons\fonts\themify.woff" />

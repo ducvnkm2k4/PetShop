@@ -15,9 +15,9 @@ namespace PetShop.web_pages
         {
             string customerId = Session[Global.CUSTOMER_ID].ToString();
             List<Customer> customers = Application.Get(Global.LIST_INFO_CUSTOMER) as List<Customer>;
-            /////thông tin khách hàng
+            //thông tin khách hàng
             if (!string.IsNullOrEmpty(customerId))
-            {
+            {//đã đăng nhập
                 title_login.Style["display"] = "none";
                 Customer customer = customers.Find(c => c.Id.ToString().Equals(customerId));
                 txtName.Value = customer.Name;
@@ -26,14 +26,14 @@ namespace PetShop.web_pages
                 txtSDT.Value = customer.PhoneNumber;
             }
             else
-            {
+            {//chưa đăng nhập
                 title_login.Style["display"] = "block";
                 txtName.Value = null;
                 txtDiaChi.Value =null;
                 txtGmail.Value = null;
                 txtSDT.Value = null;
             }
-            /////danh sách sản phẩm
+            //danh sách sản phẩm
             StringBuilder sb = new StringBuilder();
             List<CartItem> cartItems = Session[Global.LIST_SHOPPING_CART] as List<CartItem>;
             long totalCost = 0;

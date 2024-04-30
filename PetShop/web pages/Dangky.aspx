@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="../assest/css/Dangky.css" />
     <script src="../assest/js/checkInput.js"></script>
     <script type="text/javascript">
-        
-
         function onfocusInput(input,notify) {
             input.style.border = "1px solid black";
             notify.innerText = "";
@@ -37,7 +35,7 @@
             <!--LOGO--->
             <div class="header__logo">
                 <a href="TrangChu.aspx" class="header__logo">
-                    <img src="../assest/images/logomeo.jpg" style="width:70px" />
+                    <img src="../assest/images/logo.jpg" style="width:70px" />
                     <span>PET</span>
                 </a>
             </div>
@@ -116,8 +114,8 @@
         </div>
     </form>
 
-    <footer class="footer">
-        <div class="footer_left">
+    <footer class="footer" style="background-image: linear-gradient(0, #fe6433, #f53e2d)";>
+        <div class="footer_left" style="color:white";>
             <h3>PET</h3>
             <br/>
             <h4>Môn: Lập trình web cơ bản</h4>
@@ -125,7 +123,7 @@
             <h4>Giáo viên hướng dẫn: Lê Hữu Dũng</h4>
         </div>
 
-        <div class="footer_right">
+        <div class="footer_right" style="color:white";>
             <h3>Thành viên:</h3>
             <br/>
             <h4>Vũ Việt Cường</h4>

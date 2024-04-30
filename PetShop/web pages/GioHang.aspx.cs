@@ -14,17 +14,17 @@ namespace PetShop.web_pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //số lượng sản phẩm trong giỏ hàng
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
+            //giao diện khi đã đăng nhập và chưa đăng nhập
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
-
             KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, Request.Url.AbsoluteUri);
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
 
-
+            // danh sách sản phẩm được thêm vào giỏ hàng
             List<CartItem> cartItems = Session[Global.LIST_SHOPPING_CART] as List<CartItem>;
-
             StringBuilder sb = new StringBuilder();
             long total = 0;
             foreach (CartItem cartItem in cartItems)
@@ -46,22 +46,24 @@ namespace PetShop.web_pages
                 sb.Append("</a>");
                 sb.Append("</div>");
                 sb.AppendFormat("<div class='totalCostProduct'>Tổng:{0}</div>", (cartItem.Price * cartItem.Quantity).ToString("#,0", new CultureInfo("vi-VN")) + " ₫");
+                sb.AppendFormat("<a href='GioHang.aspx?request=minus&id={0}'>", cartItem.Id);
                 sb.Append("<i class='ti-trash' style='cursor: pointer;'></i>");
+                sb.Append("</a>");
                 sb.Append("</div>");
                 sb.Append("</div>");
                 sb.Append("</div>");
             }
+
             if (total == 0)
-            {
+            {//giỏ  hàng trống
                 main_content.InnerHtml = "<img src='../assest/images/gio_hang_trong.png' alt='Giỏ hàng của bạn hiện đang trống' class='empty_cart_img'/>";
             }
             else
-            {
+            {//giỏ hàng có sản phẩm 
                 Container_cart.InnerHtml = sb.ToString();
                 totalCost.InnerText = total.ToString("#,0", new CultureInfo("vi-VN")) + " ₫";
 
             }
-
 
             string request = Request.QueryString["request"];
             string idRequest = Request.QueryString["id"];
@@ -71,6 +73,7 @@ namespace PetShop.web_pages
                 index = cartItems.IndexOf(cartItems.Find(ct => ct.Id.Equals(idRequest)));
 
             }
+            // chức năng tăng số lượng
             if (!string.IsNullOrEmpty(request)&&request.Equals("plus"))
             {
                 if(index!=-1)
@@ -78,7 +81,7 @@ namespace PetShop.web_pages
                 Session[Global.LIST_SHOPPING_CART] = cartItems;
                 Response.Redirect("GioHang.aspx");
             }
-
+            //chức năng giảm số lượng
             if (!string.IsNullOrEmpty(request) && request.Equals("minus"))
             {
                 if(index!=-1)
@@ -87,9 +90,13 @@ namespace PetShop.web_pages
                 Session[Global.LIST_SHOPPING_CART] = cartItems;
                 Response.Redirect("GioHang.aspx");
             }
+            //chức năng xóa sản phẩm khỏi giỏ hàng
+            if (!string.IsNullOrEmpty(request) && request.Equals("trash")&&index!=-1)
+            {
+                cartItems.Remove(cartItems[index]);
+                Session[Global.LIST_SHOPPING_CART] = cartItems;
+                Response.Redirect("GioHang.aspx");
+            }
         }
-
-
     }
-    
 }

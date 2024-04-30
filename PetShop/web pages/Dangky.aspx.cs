@@ -12,15 +12,16 @@ namespace PetShop.web_pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //số lượng sản phẩm trong giỏ hàng
             numOfProduct.InnerHtml = "<p>" + (Session[Global.LIST_SHOPPING_CART] as List<CartItem>).Count + "</p>";
 
+            //giao diện khi đã đăng nhập và chưa đăng nhập
             string customerName = Session[Global.CUSTOMER_NAME].ToString();
             KeyValuePair<string, string> pair = Code.TaiKhoan(customerName, Request.Url.AbsoluteUri);
-
             taikhoan.InnerHtml = pair.Key;
             taikhoannavbar.InnerHtml = pair.Value;
 
-
+            //tạo tài khoản
             string preurl = Request.QueryString["preUrl"];
             string request = Request.QueryString["request"];
             if (request == "submit")
@@ -39,6 +40,7 @@ namespace PetShop.web_pages
                 Application[Global.LIST_INFO_CUSTOMER] = customers;
                 Session[Global.CUSTOMER_NAME] = Request.Form["txtName"];
                 Session[Global.CUSTOMER_ID] = customer.Id;
+                Response.Redirect(preurl);
             }
         }
     }
